@@ -3,14 +3,7 @@ dxf_to_tsv
 
 Convert/Extract point data from a DXF file.
 
-TOC
----
-  * [Background](#Background)
-  * [Use Case](#Use-Case)
-  * [Synopsis](#Synopsis)
-  * [Disclaimer](#Disclaimer)
-
-(#Background)
+Background
 ----------
 
 If you have a DXF file that looks like this:
@@ -65,12 +58,12 @@ you can use dxf_to_tsv.pl to extract the coordinates of the points to a Tab Sepa
 ...
 ```
 
-(#Use-Case)
+Use Case
 --------
 
 This is needed if you want to use files exported in DXF format from a Leica TPS 400 (http://www.leica-geosystems.com/en/page_catalog.htm?cid=132) in QuantumGis (http://www.qgis.org/).
 
-(#Synopsis)
+Synopsis
 --------
 
 Extract data from one file:
@@ -89,7 +82,7 @@ find . -type f -iname '*.DXF' -exec sh -c '/YOUR/PATH/TO/dxf_to_tsv.pl "$0" > "$
 ```
 this will create new files named filename.dxf.tsv in the same directory. Change /YOUR/PATH/TO to where the script is located.
 
-(#Disclaimer)
+Disclaimer
 ----------
 
 Script tested on Ubuntu Linux with Perl v5.10.1. Cannot guarantee it will work for you.
