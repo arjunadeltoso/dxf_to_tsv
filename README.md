@@ -78,7 +78,7 @@ $ dxt_to_tsv.pl filename > new_filename.tsv
 
 Extract data from multiple files in same directory and save to new files in same directory:
 ```sh
-find . -type f -iname '*.DXF' -exec sh -c '/YOUR/PATH/TO/dxf_to_tsv.pl "$0" > "$0".tsv' {} ';'
+$ find . -type f -iname '*.DXF' -exec sh -c '/YOUR/PATH/TO/dxf_to_tsv.pl "$0" > "$0".tsv' {} ';'
 ```
 this will create new files named filename.dxf.tsv in the same directory. Change /YOUR/PATH/TO to where the script is located.
 
