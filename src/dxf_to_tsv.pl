@@ -30,15 +30,15 @@ while (my $file = shift) {
     my $line = '';
     while (<INPUT_FILE>) {
 	s/\R//g;
-	if ($_ =~ m/^INSERT/ || $counter) {
+	if ($_ =~ m/^POINT/ || $counter) {
 	    $counter = $counter + 1;
 	}
 
-	if ($counter == 9 || $counter == 11) {
+	if ($counter == 7 || $counter == 9) {
 	    $line = $line . $_ . "\t";
 	}
 	
-	if ($counter == 13) {
+	if ($counter == 11) {
 	    print $line . $_ . "\n";
 	    $line = '';
 	    $counter = 0;
